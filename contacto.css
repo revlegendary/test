@@ -1,0 +1,65 @@
+body{
+    
+    background: url('images/uia3.jpg') no-repeat scroll center center / cover;
+}
+.contact-form{
+    background: #616161;
+    width: 70%;
+    height: 70%;
+    
+    
+}
+.contact-form .form-control{
+    border-radius:1rem;
+}
+
+.contact-form {
+    padding: 2%;
+    align-content: center;
+    margin: 10%;
+}
+.row{
+    margin-bottom: -7%;
+    
+}
+.contact-form h3{
+    margin-bottom: 8%;
+    margin-top: 1px;
+    text-align: center;
+    color: #5F3679;
+}
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #dc3545;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+.btnContactSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #5F3679;
+    border: none;
+    cursor: pointer;
+}
+#opacidad{
+
+    opacity:0.8;
+    filter:alpha(opacity=60); /* IE < 9.0 */
+
+}
+#fodo{
+    background: #616161;
+    opacity: 0.8;
+    
+    
+}
+#boton{
+    align:center; 
+}

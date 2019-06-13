@@ -1,0 +1,85 @@
+html,
+body,
+header,
+#intro
+{
+    height: 100%;
+    width: 100%;
+    background: #333333;
+     
+}
+
+#intro
+{
+    background: url("file:///Users/revlehendary/Downloads/compan%CC%83ia.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+}
+
+#Empresa
+{
+    font-size: 90px;
+}
+#Description
+{
+    font-size: 40px;
+}
+#boton
+{
+    font-size: 15px;
+}
+#anuncion
+{
+    height: 100%;
+    background: url("file:///Users/revlehendary/Desktop/MDB-Free_4.7.3/imagenes/pagina1.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+}
+#fodo
+{
+    background: url("file:///Users/revlehendary/Desktop/MDB-Free_4.7.3/imagenes/test.jpg");
+}
+#map-container
+{
+    background: url("https://image.posta.com.mx/sites/default/files/captura_de_pantalla_2019-01-09_a_las_09.40.38.jpg")
+}
+#new
+{
+    font-size: 35px;
+}
+#fonfoColor{
+    background-color: white
+}
+#line_color
+{
+    color: #333333;
+}
+#form2
+{
+    color: aqua;
+}
+
+#ajuste{
+    width: 430px;
+    height: 260px;
+}
+.top-nav-collapse {
+    background-color: #24355C;
+  }
+  @media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+      background-color: #24355C;
+    }
+  }
+  @media (min-width: 800px) and (max-width: 850px) {
+    .navbar:not(.top-nav-collapse) {
+      background-color: #24355C;
+    }
+  }
+
+
+

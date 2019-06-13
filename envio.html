@@ -1,0 +1,190 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        EmailJS!
+    </title>
+    </meta>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Plugin-CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Main-Stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="file:///Users/revlehendary/Desktop/coatza/MDB-Free_4.7.3/css2/style.min.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="contacto.css">
+    </link>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_w9B4B9DOkzCnLpeqKJyrU");
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- <div id="formulario" class="from-double">
+                    <div id="app" style="padding-top: 9rem;" class="col-xs-12" class="form-double">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6 col-sm-offset-3 form-group">
+                                    <label>
+                                        Nombre:
+                        </label>
+                                    <input class="form-control" type="text" v-model="from_name">
+                                    </input>
+                                </div>
+                                <div class="col-sm-6 col-sm-offset-3 form-group">
+                                    <label>
+                                        Asunto:
+                        </label>
+                                    <input class="form-control" type="text" v-model="subject">
+                                    </input>
+                                </div>
+                                <div class="col-sm-6 col-sm-offset-3 form-group">
+                                    <label>
+                                        Correo:
+                        </label>
+                                    <input class="form-control" type="email" v-model="from_email">
+                                    </input>
+                                </div>
+                                <div class="col-sm-6 col-sm-offset-3 form-group">
+                                    <label>
+                                        Mensaje:
+                        </label>
+                                    <textarea class="form-control" v-model="message">
+                                    </textarea>
+                                </div>
+                                <div class="col-sm-6 col-sm-offset-3 text-center">
+                                    <button @click="enviar" class="btn btn-success">
+                                        Enviar
+                        </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+        </div>-->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    <script>
+        let getData = () => {
+            let name = document.getElementById('name').value
+            let email = document.getElementById('email').value
+            let asunto = document.getElementById('asunto').value
+            let messsage = document.getElementById('messsage').value
+            if (name) {
+                if (email) {
+                    if (asunto) {
+                        if (messsage) {
+                            let objectToSend = {
+                                name,
+                                email,
+                                asunto,
+                                messsage
+                            }
+
+                            emailjs.send('gmail', 'test', objectToSend)
+                                .then(function (response) {
+                                    console.log('SUCCESS!', response.status, response.text);
+                                    if(response.status == 200){
+                                        document.getElementById('name').value = ""
+                                        document.getElementById('email').value = ""
+                                        document.getElementById('asunto').value = ""
+                                        document.getElementById('messsage').value = ""
+                                        alert("Mensaje enviado")
+                                    }
+                                }, function (error) {
+                                    console.log('FAILED...', error);
+                                });
+                            console.log(objectToSend)
+                        } else {
+                            alert("Mete tu mensaje, wey")
+                        }
+                    } else {
+                        alert("Mete tu asunto, wey")
+                    }
+                } else {
+                    alert("Mete tu correo, wey")
+                }
+            } else {
+                alert("Mete tu nombre, wey")
+            }
+
+        }
+
+    </script>
+    <div class="container contact-form">
+       
+        <div class="center-block">
+            <div>
+                <h3>Envianos tu Duda!!</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" name="txtName" class="form-control" placeholder="Nombre" value=""
+                                v-model="from_name" id="name" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="txtEmail" class="form-control" placeholder="Email " value=""
+                                id="email" v-model="from_email" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="txtPhone" class="form-control" placeholder="Asunto " value=""
+                                id="asunto" v-model="subject" />
+                        </div>
+                        <div class="form-group">
+                            <button name="btnSubmit" class="btnContact" value="Mensaje"
+                                onclick="getData()">Enviar</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <textarea name="txtMsg" class="form-control" placeholder="Mensaje " id="messsage"
+                                style="width: 100%; height: 150px;" v-model="message"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div> 
+
+<!--         
+        <div class="container contact-form">
+
+                <form method="post" id="fodo">
+                    <h3>Drop Us a Message</h3>
+                   <div id="opacidad"class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" name="txtName" class="form-control" placeholder="Your Name *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="txtEmail" class="form-control" placeholder="Your Email *" value="" />
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="txtPhone" class="form-control" placeholder="Your Phone Number *" value="" />
+                            </div>
+                            <div class="form-group" id="boton">
+                                <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <textarea name="txtMsg" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                
+    </div> -->
+
+</body>
+
+</html>
